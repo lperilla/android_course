@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PrimeraAPP</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">Aplicación ejemplo</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="action_new">Nueva acción</string>
+    <string name="botones">Ir a otra actividad</string>
+    <string name="title_activity_data_view">DataViewActivity</string>
+    <string name="title_activity_otra">OtraActivity</string>
+    <string name="title_activity_principal">PrincipalActivity</string>
+</resources>

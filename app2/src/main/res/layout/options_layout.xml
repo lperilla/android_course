@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/holo_blue_dark"
+    tools:context="com.example.lperilla.app2.MainActivity">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/callBtn"
+            android:text="@string/llamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:onClick="onClick"
+            android:background="@android:drawable/ic_menu_call"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <Space android:layout_width="50dp" android:layout_column="1"/>
+
+        <Button
+            android:id="@+id/contactsBtn"
+            android:text="@string/contactos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:background="@android:drawable/ic_menu_agenda" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Space android:layout_height="50dp" android:layout_column="0"/>
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/googleBtn"
+            android:text="@string/google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:background="@android:drawable/ic_menu_view" />
+
+        <Space android:layout_width="50dp" android:layout_column="1"/>
+
+        <Button
+            android:id="@+id/photoBtn"
+            android:text="@string/hacer_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:onClick="photoOnClickAction"
+            android:background="@android:drawable/ic_menu_camera"
+            android:singleLine="false"
+            android:nestedScrollingEnabled="false" />
+    </TableRow>
+
+</TableLayout>
