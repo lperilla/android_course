@@ -10,8 +10,6 @@ public class ServicesMainActivity extends AppCompatActivity implements View.OnCl
 
     private Button startBtn;
 
-    private Button closeBtn;
-
     private Intent intent;
 
     @Override
@@ -21,9 +19,6 @@ public class ServicesMainActivity extends AppCompatActivity implements View.OnCl
 
         this.startBtn = (Button) findViewById(R.id.startBtn);
         this.startBtn.setOnClickListener(this);
-
-        this.closeBtn = (Button) findViewById(R.id.closeBtn);
-        this.closeBtn.setOnClickListener(this);
     }
 
     @Override

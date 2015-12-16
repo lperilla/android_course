@@ -16,7 +16,9 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class AlarmActivity extends AppCompatActivity {
+import com.example.lperilla.services.utils.Utils;
+
+public class AlarmActivity extends Activity {
 
     private Button closeBtn;
 
@@ -28,7 +30,6 @@ public class AlarmActivity extends AppCompatActivity {
 
     //Patron de sonido
     private long pattern[] = {0,300,200,100,500,300,100,200,500};
-
 
     private View.OnClickListener closeBtn_onClickListener = new View.OnClickListener() {
         @Override
@@ -95,6 +96,7 @@ public class AlarmActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Utils.msgToast(getApplicationContext(), "ondestroy");
         Intent finalizar = new Intent();
         finalizar.setClass(AlarmActivity.this, ExampleService.class);
         AlarmActivity.this.stopService(finalizar);

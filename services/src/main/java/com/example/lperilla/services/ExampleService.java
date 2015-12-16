@@ -33,8 +33,8 @@ public class ExampleService extends Service {
         Log.i(CLASS_TAG, "Ejecutando metodo onCreate");
         try {
             //Se crea una rutina de retardo
-            Thread.sleep(DELAY);
             Utils.msgToast(this.getApplicationContext(), this.getString(R.string.example_service_msg_001));
+            Thread.sleep(DELAY);
         } catch (InterruptedException e) {
             Log.e(CLASS_TAG, e.getMessage());
             e.printStackTrace();
@@ -44,7 +44,8 @@ public class ExampleService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(CLASS_TAG, "Ejecutando metodo onStartCommand");
-        Utils.msgToast(this.getApplicationContext(), this.getString(R.string.example_service_msg_002, flags, startId));
+
+        Utils.msgToast(this.getApplicationContext(), this.getString(R.string.example_service_msg_002));
 
         Intent alarmIntent = new Intent(getBaseContext(), AlarmActivity.class);
         alarmIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -53,12 +54,16 @@ public class ExampleService extends Service {
                 WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD +
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON +
                 WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+
+        this.getApplication().startActivity(alarmIntent);
+
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+
         Log.i(CLASS_TAG, "Ejecutando metodo onDestroy");
 
         Utils.msgToast(getApplicationContext(), this.getString(R.string.example_service_msg_003));
