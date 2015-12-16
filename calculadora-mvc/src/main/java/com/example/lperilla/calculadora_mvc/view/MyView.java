@@ -1,6 +1,5 @@
 package com.example.lperilla.calculadora_mvc.view;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.widget.EditText;
@@ -15,14 +14,14 @@ public class MyView extends LinearLayout {
 
     private EditText pantalla;
 
-    public MyView(Context context){
+    public MyView(Context context) {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.display, this);
         pantalla = (EditText) findViewById(R.id.editString);
     }
 
-    public void setView(String value){
+    public void setView(String value) {
         this.pantalla.setText(value);
     }
 }

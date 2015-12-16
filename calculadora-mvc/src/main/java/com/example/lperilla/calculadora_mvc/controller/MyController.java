@@ -14,7 +14,7 @@ import com.example.lperilla.calculadora_mvc.view.MyView;
 /**
  * Created by lperilla on 15/12/15.
  */
-public class MyController extends LinearLayout implements View.OnClickListener{
+public class MyController extends LinearLayout implements View.OnClickListener {
 
     private MyModel myModel;
 
@@ -22,7 +22,7 @@ public class MyController extends LinearLayout implements View.OnClickListener{
 
     private View keyboardView;
 
-    public MyController(Context context, final MyModel model, final MyView view){
+    public MyController(Context context, final MyModel model, final MyView view) {
         super(context);
         this.setMyModel(model);
         this.setMyView(view);
@@ -47,12 +47,12 @@ public class MyController extends LinearLayout implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if (v instanceof Button){
+        if (v instanceof Button) {
             Button button = (Button) v;
             char value = button.getText().charAt(0);
 
             this.getMyModel().setModel(value);
-            Log.i("Controller", "Model: "+value);
+            Log.i("Controller", "Model: " + value);
             switch (button.getId()) {
                 case R.id.button0:
                     this.getMyView().setView(this.getMyModel().getModel());

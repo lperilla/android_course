@@ -36,8 +36,8 @@ public class DataViewActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        logger.info("id: "+id + "  "+R.id.atras);
-        switch (id){
+        logger.info("id: " + id + "  " + R.id.atras);
+        switch (id) {
             case R.id.atras:
                 boolean error = false;
                 EditText userName = (EditText) findViewById(R.id.userNameTxf);
@@ -52,7 +52,7 @@ public class DataViewActivity extends AppCompatActivity {
                     Toast.makeText(this.getApplicationContext(), "Digite el apellido por favor", Toast.LENGTH_LONG).show();
                     break;
                 }
-                    //Creamos el intent
+                //Creamos el intent
                 Intent regreso = new Intent();
                 // Almacenamos los datos de los campos en el intent por medio del metodo putExtra
                 regreso.putExtra(MainActivity.USER_NAME_PARAM, userName.getText().toString());

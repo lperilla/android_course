@@ -8,7 +8,7 @@ import android.content.Context;
  */
 public class Util {
 
-    public static AlertDialog errorDialog(Context context, Exception ex){
+    public static AlertDialog errorDialog(Context context, Exception ex) {
         AlertDialog.Builder errorDialog = new AlertDialog.Builder(context);
         errorDialog.setCancelable(true);
         errorDialog.setTitle("Error: " + ex.getClass());

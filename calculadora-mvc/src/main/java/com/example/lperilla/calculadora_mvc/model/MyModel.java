@@ -11,13 +11,16 @@ public class MyModel {
 
     private char op;
 
-    public MyModel()
-    {
+    public MyModel() {
         this.acumulador = 0.0;
     }
 
-    public void setModel(char operator){
-        switch (operator){
+    public String getModel() {
+        return acumulador + "";
+    }
+
+    public void setModel(char operator) {
+        switch (operator) {
             case 'C':
                 this.operacion = 0.0;
                 this.acumulador = 0.0;
@@ -30,13 +33,9 @@ public class MyModel {
                 this.acumulador += operacion;
                 break;
             default:
-                acumulador = acumulador * 10.0 + (operator-'0');
+                acumulador = acumulador * 10.0 + (operator - '0');
                 break;
         }
-    }
-
-    public String getModel(){
-        return acumulador+"";
     }
 
 }

@@ -8,10 +8,10 @@
     tools:context="com.example.lperilla.primeraapp.DataViewActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:id="@+id/view">
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -22,50 +22,50 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Data View Activity"
-        android:hint="Escriba algo"
-        android:gravity="center"
         android:id="@+id/titleLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/view" />
+        android:gravity="center"
+        android:hint="Escriba algo"
+        android:text="Data View Activity" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User Name"
         android:id="@+id/userNameLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/userNameTxf"
-        android:layout_toStartOf="@+id/userNameTxf" />
+        android:layout_toStartOf="@+id/userNameTxf"
+        android:text="User Name" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Last Name"
         android:id="@+id/lastNameLbl"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/userNameLbl" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
+        android:layout_alignEnd="@+id/userNameLbl"
+        android:layout_centerVertical="true"
+        android:text="Last Name" />
+
+    <EditText
         android:id="@+id/userNameTxf"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/titleLbl"
-        android:layout_alignStart="@+id/titleLbl" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:layout_alignStart="@+id/titleLbl"
+        android:layout_below="@+id/titleLbl"
+        android:layout_marginTop="60dp"
         android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
         android:id="@+id/lastNameTxf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/userNameTxf"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/userNameTxf" />
+        android:ems="10"
+        android:inputType="textPersonName" />
 
 
 </RelativeLayout>

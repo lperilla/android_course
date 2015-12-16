@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.init();
     }
 
-    private void init(){
+    private void init() {
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         this.setSupportActionBar(toolbar);*/
 
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v instanceof Button){
-            switch (v.getId()){
+        if (v instanceof Button) {
+            switch (v.getId()) {
                 case R.id.callBtn:
                     this.callAction();
                     break;
@@ -65,44 +65,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.photoBtn:
                     this.browserAction();
                     break;
-           }
+            }
         }
     }
 
-    public void photoOnClickAction(View v){
+    public void photoOnClickAction(View v) {
         Util.errorDialog(this, new Exception("Error no valido"));
     }
 
-    public void closeOnClickAction(View v){
+    public void closeOnClickAction(View v) {
         this.finish();
     }
 
-    private void callAction(){
+    private void callAction() {
         try {
-            Intent callIntent = new Intent(Intent.ACTION_DIAL,Uri.parse(this.getString(R.string.tel_number)));
+            Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse(this.getString(R.string.tel_number)));
             this.startActivity(callIntent);
-        }
-        catch (SecurityException ex){
+        } catch (SecurityException ex) {
             Util.errorDialog(this, ex);
             ex.printStackTrace();
         }
     }
 
-    private void contactsAction(){
+    private void contactsAction() {
         try {
             Intent contactsIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(this.getString(R.string.contacts)));
             startActivity(contactsIntent);
-        }catch (SecurityException ex){
+        } catch (SecurityException ex) {
             Util.errorDialog(this, ex);
             ex.printStackTrace();
         }
     }
 
-    private void browserAction(){
+    private void browserAction() {
         try {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(this.getString(R.string.url)));
             startActivity(browserIntent);
-        }catch (SecurityException ex){
+        } catch (SecurityException ex) {
             Util.errorDialog(this, ex);
             ex.printStackTrace();
         }

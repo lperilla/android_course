@@ -4,27 +4,28 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.logging.Logger;
 
-public class MainActivity extends AppCompatActivity{
-
-    private Logger logger = Logger.getLogger(this.getClass().getName());
-
-    private Button buttonIr;
+public class MainActivity extends AppCompatActivity {
 
     private static final int INTENT_GET_MSG = 1;
-
     public static String USER_NAME_PARAM = "userName";
-
     public static String LAST_NAME_PARAM = "lastName";
-
+    private Logger logger = Logger.getLogger(this.getClass().getName());
+    private final View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            onClickAction_Button(v);
+        }
+    };
+    private Button buttonIr;
     private TextView mensajeBottonTxt;
 
     @Override
@@ -47,16 +48,14 @@ public class MainActivity extends AppCompatActivity{
             if (resultCode == Activity.RESULT_OK) {
                 String userName = data.getStringExtra(MainActivity.USER_NAME_PARAM);
                 String lastName = data.getStringExtra(MainActivity.LAST_NAME_PARAM);
-                Toast.makeText(getApplicationContext(), "Usuario: "+userName + " Apellido: "+ lastName, Toast.LENGTH_LONG);
-                this.mensajeBottonTxt.setText("Usuario: "+userName + " Apellido: "+ lastName);
-            }
-            else{
+                Toast.makeText(getApplicationContext(), "Usuario: " + userName + " Apellido: " + lastName, Toast.LENGTH_LONG);
+                this.mensajeBottonTxt.setText("Usuario: " + userName + " Apellido: " + lastName);
+            } else {
                 Toast.makeText(getApplicationContext(), "Error de mensaje", Toast.LENGTH_LONG);
                 this.mensajeBottonTxt.setText("Error!");
             }
         }
     }
-
 
     @Override
     protected void onStart() {
@@ -117,11 +116,4 @@ public class MainActivity extends AppCompatActivity{
 
         //startActivity(intent);
     }
-
-    private final View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            onClickAction_Button(v);
-        }
-    };
 }
