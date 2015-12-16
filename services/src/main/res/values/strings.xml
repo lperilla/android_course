@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">services</string>
+    <string name="start_btn">Start Service</string>
+    <string name="close_btn_text">Close Service</string>
+    <string name="example_service_text">Example Service</string>
+    <string name="example_service_msg_001">Servicio creado!</string>
+    <string name="example_service_msg_002">Servicio Iniciado!</string>
+    <string name="example_service_msg_003">Servicio Destruido!</string>
 </resources>
