@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">broadcast-receiver</string>
+    <string name="text">Aplicación para manejo de MSM</string>
+</resources>

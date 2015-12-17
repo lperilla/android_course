@@ -1,1 +1,1 @@
-include ':app', ':calculadora-mvc', ':services', ':app2'
+include ':app', ':calculadora-mvc', ':services', ':app2', ':broadcast-receiver'
