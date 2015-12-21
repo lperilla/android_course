@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">notification-app</string>
+    <string name="app_title">Notificaciones</string>
+    <string name="app_description">Aplicación que genera una notificación cada x minutos</string>
+    <string name="lbl_time">Seleccione los minutos:</string>
+    <string name="saved_minutes_key">minutes</string>
+    <integer name="saved_minutes_default">5</integer>
+    <integer name="min_minutes">1</integer>
+    <integer name="max_minutes">60</integer>
+</resources>
